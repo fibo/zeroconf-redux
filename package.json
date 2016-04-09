@@ -6,6 +6,7 @@
     "npm": ">= 3"
   },
   "scripts": {
+    "cp_babelrc": "cp .babelrc ../..",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

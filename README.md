@@ -34,6 +34,12 @@ Create a *.babelrc* with the following content
 }
 ```
 
+Instead of creating it manually, you can run
+
+```bash
+npm explore zeroconf-redux npm run cp_babelrc
+```
+
 Add an npm script to your *package.json*, to run [budo][budo] dev server. For example
 
 ```json
