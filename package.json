@@ -14,7 +14,7 @@
     "url": "git+https://github.com/fibo/zeroconf-redux.git"
   },
   "keywords": [
-    "broserify",
+    "browserify",
     "budo",
     "redux"
   ],
