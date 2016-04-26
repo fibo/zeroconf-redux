@@ -43,7 +43,7 @@ npm explore zeroconf-redux npm run cp_babelrc
 Add an npm script to your *package.json*, to run [budo][budo] dev server. For example
 
 ```json
-  "start": "budo index.js --dir . --live --example -- -t babelify",
+  "start": "budo index.js --dir . --live --open -- -t babelify",
 ```
 
 Now, running `npm start` it will
