@@ -8,6 +8,7 @@
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Development](#development)
 * [License](#license)
 
 ## Installation
@@ -79,6 +80,29 @@ Now you can run the example with
 
 ```bash
 npm run example_counter
+```
+
+## Development
+
+This is an empty package, there is no code implementation, only a set of
+dependencies, and the login to handle them.
+
+Check that all deps are up to date
+
+```bash
+npm test
+```
+
+Update all deps
+
+```bash
+npm run update-deps
+```
+
+Release a new minor version
+
+```bash
+npm version minor
 ```
 
 ## License
