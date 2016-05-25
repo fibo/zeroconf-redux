@@ -24,7 +24,8 @@ npm install zeroconf-redux --save-dev
 
 Assumption: your project folder contains an *index.js* and an *index.html*.
 
-Create a *.babelrc* with the following content
+On `postinstall` a *.babelrc* is created, if it does not exists.
+It has the following content
 
 ```json
 {
@@ -34,13 +35,14 @@ Create a *.babelrc* with the following content
 }
 ```
 
-Instead of creating it manually, you can run
+If you want to trigger it manually, you can run
 
 ```bash
 npm explore zeroconf-redux npm run cp_babelrc
 ```
 
-Add an npm script to your *package.json*, to run [budo][budo] dev server. For example
+Add an npm script to your *package.json*, to run [budo][budo] dev server.
+For example
 
 ```json
   "start": "budo index.js --dir . --live --open -- -t babelify",
@@ -56,11 +58,16 @@ So, you can focus on your code now!
 
 ## Customization
 
-Of course you can use any budo or browserify feature. In particular, if you need more
-babel presets or plugins, other than *es2015* and *react*, just install and add them
-to your *.babelrc*.
+### Babel presets
 
-For example, suppose you have a *counter/* folder containing the official [redux/examples/counter][redux_counter] files.
+If you need more babel presets or plugins, other than
+[es2015-preset][babel-es2015-preset] and [react-preset][babel-react-preset],
+just install and add them to your *.babelrc*.
+
+### Run a single example
+
+Suppose you have a *counter/* folder containing the official
+[redux/examples/counter][redux_counter] files.
 
 Add the following npm script
 
@@ -74,35 +81,12 @@ Now you can run the example with
 npm run example_counter
 ```
 
-## Bonus tip
-
-To complete the picture, it is recommended to add *standardjs* linter and *pre-commit* git hook.
-
-```bash
-npm install standard pre-commit --save-dev
-```
-
-Then add to your *package.json*
-
-```json
-...
-  "scripts": {
-...
-    "check-deps": "npm outdated",
-    "lint": "standard",
-...
-  },
-  "pre-commit": [
-    "check-deps",
-    "lint"
-  ],
-...
-```
-
 ## License
 
 [MIT](http://g14n.info/mit-license/)
 
 [budo]: https://github.com/mattdesl/budo
 [redux]: http://redux.js.org/
-[redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter
+[redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
+[babel-es2015-preset]: https://babeljs.io/docs/plugins/preset-es2015/ "ES2015 preset"
+[babel-react-preset]: https://babeljs.io/docs/plugins/preset-react/ "React preset"
