@@ -1,15 +1,16 @@
 {
   "name": "zeroconf-redux",
   "version": "0.2.1",
-  "description": "is a minimal redux dev stack, on top of browserify+budo",
+  "description": "is a minimal redux dev stack, on top of browserify + budo",
   "engines": {
     "npm": ">= 4"
   },
   "scripts": {
-    "cp_babelrc": "ls ../../.babelrc || cp .babelrc ../..",
+    "alert": "npm outdated && echo \"\nDependencies need update, run\n\n\tnpm run update-deps\n\"",
+    "cp_babelrc": "[[ -f ../../package.json ]] && [[ ! -f ../../.babelrc ]] && cp .babelrc ../..",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "postinstall": "npm run cp_babelrc",
-    "test": "echo This package has no test",
+    "test": "[[ $(npm outdated)  ]] && npm run alert && exit 1",
     "update-deps": "npm update --save --dev",
     "postupdate-deps": "git commit -am 'updated deps'"
   },
@@ -37,7 +38,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "budo": "^8.1.0",
-    "react": "^15.0.1",
+    "react": "^15.0.0",
     "react-dom": "^15.0.1",
     "react-redux": "^4.4.2",
     "redux": "^3.4.0"
