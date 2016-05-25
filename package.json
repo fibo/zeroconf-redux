@@ -9,7 +9,9 @@
     "cp_babelrc": "ls ../../.babelrc || cp .babelrc ../..",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "postinstall": "npm run cp_babelrc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo This package has no test",
+    "update-deps": "npm update --save --dev",
+    "postupdate-deps": "git commit -am 'updated deps'"
   },
   "repository": {
     "type": "git",

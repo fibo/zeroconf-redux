@@ -1,6 +1,6 @@
 # zeroconf-redux
 
-> is a minimal [redux][redux] dev stack, on top of browserify+budo
+> is a minimal [redux][redux] dev stack, on top of [browserify] + [budo]
 
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux) [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux)
 
@@ -85,7 +85,8 @@ npm run example_counter
 
 [MIT](http://g14n.info/mit-license/)
 
-[budo]: https://github.com/mattdesl/budo
+[budo]: https://github.com/mattdesl/budo "budo"
+[browserify]: http://browserify.org/ "browserify"
 [redux]: http://redux.js.org/
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [babel-es2015-preset]: https://babeljs.io/docs/plugins/preset-es2015/ "ES2015 preset"
