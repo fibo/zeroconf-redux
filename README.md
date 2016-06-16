@@ -4,12 +4,23 @@
 
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux) [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux)
 
-**Table Of Contents:**
+[Installation](#installation) |
+[Usage](#usage) |
+[Development](#development) |
+[License](#license)
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Development](#development)
-* [License](#license)
+This is an empty package, there is no code implementation, only a set of
+dependencies:
+
+* [babel-es2015-preset]
+* [babel-react-preset]
+* [babelify]
+* [browserify]
+* [budo]
+* [react]
+* [react-dom]
+* [react-redux]
+* [redux]
 
 ## Installation
 
@@ -42,7 +53,7 @@ If you want to trigger it manually, you can run
 npm explore zeroconf-redux npm run cp_babelrc
 ```
 
-Add an npm script to your *package.json*, to run [budo][budo] dev server.
+Add an npm script to your *package.json*, to run [budo] dev server.
 For example
 
 ```json
@@ -84,9 +95,6 @@ npm run example_counter
 
 ## Development
 
-This is an empty package, there is no code implementation, only a set of
-dependencies, and the login to handle them.
-
 Check that all deps are up to date
 
 ```bash
@@ -109,6 +117,10 @@ npm version minor
 
 [MIT](http://g14n.info/mit-license/)
 
+[babelify]: https://github.com/babel/babelify "babelify"
+[react]: https://facebook.github.io/react/ "React"
+[react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
+[react-redux]: https://github.com/reactjs/react-redux "React Redux"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [redux]: http://redux.js.org/
