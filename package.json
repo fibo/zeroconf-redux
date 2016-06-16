@@ -44,5 +44,10 @@
     "react-dom": "^15.0.0",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0"
+  },
+  "devDependencies": {
+    "babel-plugin-react-transform": "^2.0.2",
+    "livereactload": "^2.2.3",
+    "react-proxy": "^1.1.8"
   }
 }

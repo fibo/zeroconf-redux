@@ -17,6 +17,7 @@ dependencies:
 * [babelify]
 * [browserify]
 * [budo]
+* [livereactload]
 * [react]
 * [react-dom]
 * [react-redux]
@@ -67,6 +68,43 @@ Now, running `npm start` it will
 3. Start watching HTML and CSS files, with livereload on changes.
 
 So, you can focus on your code now!
+
+## LiveReactload
+
+You can benefit from awesome **hot reloading** feature by using a *.babelrc* like
+
+```json
+{
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        ["react-transform", {
+          "transforms": [{
+            "transform": "livereactload/babel-transform",
+            "imports": ["react"]
+          }]
+        }]
+      ]
+    }
+  }
+}
+```
+
+Assuming your *index.js* creates the DOM element where you will mount your
+React app, probably you can omit the *index.html*.
+
+Then add the following npm script to your *package.json*
+
+```json
+"start": "BABEL_ENV=development NODE_PATH=. budo --open index.js -- -t babelify -p livereactload",
+```
+
+Now, launching `npm start` you can edit your code and it will be injected
+in your page without losing the state.
 
 ## Customization
 
@@ -127,3 +165,4 @@ npm version minor
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [babel-es2015-preset]: https://babeljs.io/docs/plugins/preset-es2015/ "ES2015 preset"
 [babel-react-preset]: https://babeljs.io/docs/plugins/preset-react/ "React preset"
+[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
