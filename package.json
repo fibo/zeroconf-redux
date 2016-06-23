@@ -8,13 +8,11 @@
   "scripts": {
     "prealert": "npm outdated",
     "alert": "echo \"\nDependencies need update, run\n\n\tnpm run update-deps\n\"",
-    "cp_babelrc": "[[ -f ../../package.json ]] && [[ ! -f ../../.babelrc ]] && cp .babelrc ../.. || exit 0",
-    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
+    "cp_babelrc": "[ -f ../../package.json ] && [ ! -f ../../.babelrc ] && cp .babelrc ../.. || exit 0",
     "postinstall": "npm run cp_babelrc",
+    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "pretest": "npm install",
-    "test": "[[ $(npm outdated) ]] && npm run alert || exit 0",
-    "update-deps": "npm update --save --dev",
-    "postupdate-deps": "git commit -am 'updated deps'"
+    "test": "[[ $(npm outdated) ]] && npm run alert || exit 0"
   },
   "repository": {
     "type": "git",

@@ -6,7 +6,6 @@
 
 [Installation](#installation) |
 [Usage](#usage) |
-[Development](#development) |
 [License](#license)
 
 This is an empty package, there is no code implementation, only a set of
@@ -129,26 +128,6 @@ Now you can run the example with
 
 ```bash
 npm run example_counter
-```
-
-## Development
-
-Check that all deps are up to date
-
-```bash
-npm test
-```
-
-Update all deps
-
-```bash
-npm run update-deps
-```
-
-Release a new minor version
-
-```bash
-npm version minor
 ```
 
 ## License
