@@ -38,7 +38,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "budo": "^8.3.0",
-    "react": "^15.1.0",
+    "react": "^15.2.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0"
