@@ -21,6 +21,7 @@ dependencies:
 * [react-dom]
 * [react-redux]
 * [redux]
+* [redux-thunk]
 
 ## Installation
 
@@ -135,13 +136,14 @@ npm run example_counter
 [MIT](http://g14n.info/mit-license/)
 
 [babelify]: https://github.com/babel/babelify "babelify"
+[babel-es2015-preset]: https://babeljs.io/docs/plugins/preset-es2015/ "ES2015 preset"
+[babel-react-preset]: https://babeljs.io/docs/plugins/preset-react/ "React preset"
+[budo]: https://github.com/mattdesl/budo "budo"
+[browserify]: http://browserify.org/ "browserify"
+[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [react]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
-[budo]: https://github.com/mattdesl/budo "budo"
-[browserify]: http://browserify.org/ "browserify"
 [redux]: http://redux.js.org/
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
-[babel-es2015-preset]: https://babeljs.io/docs/plugins/preset-es2015/ "ES2015 preset"
-[babel-react-preset]: https://babeljs.io/docs/plugins/preset-react/ "React preset"
-[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
+[redux-thunk]: https://github.com/gaearon/redux-thunk "Redux thunk middleware"
