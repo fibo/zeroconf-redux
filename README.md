@@ -23,6 +23,9 @@ dependencies:
 * [redux]
 * [redux-thunk]
 
+I am using [greenkeeper.io](https://greenkeeper.io) to keep dependencies up to date, then
+publish them as *patch* versions.
+
 ## Installation
 
 With [npm v3](https://npmjs.org/) do
