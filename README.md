@@ -11,8 +11,8 @@
 This is an empty package, there is no code implementation, only a set of
 dependencies:
 
-* [babel-es2015-preset]
-* [babel-react-preset]
+* [babel-preset-es2015]
+* [babel-preset-react]
 * [babelify]
 * [browserify]
 * [budo]
@@ -114,7 +114,7 @@ in your page without losing the state.
 ### Babel presets
 
 If you need more babel presets or plugins, other than
-[es2015-preset][babel-es2015-preset] and [react-preset][babel-react-preset],
+[babel-preset-es2015] and [babel-preset-react],
 just install and add them to your *.babelrc*.
 
 ### Run a single example
@@ -139,8 +139,8 @@ npm run example_counter
 [MIT](http://g14n.info/mit-license/)
 
 [babelify]: https://github.com/babel/babelify "babelify"
-[babel-es2015-preset]: https://babeljs.io/docs/plugins/preset-es2015/ "ES2015 preset"
-[babel-react-preset]: https://babeljs.io/docs/plugins/preset-react/ "React preset"
+[babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
+[babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
