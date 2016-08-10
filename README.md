@@ -11,12 +11,12 @@
 This is an empty package, there is no code implementation, only a set of
 dependencies:
 
+* [babel-cli]
 * [babel-preset-es2015]
 * [babel-preset-react]
 * [babelify]
 * [browserify]
 * [budo]
-* [livereactload]
 * [react]
 * [react-dom]
 * [react-redux]
@@ -72,9 +72,42 @@ Now, running `npm start` it will
 
 So, you can focus on your code now!
 
-## LiveReactload
+### Customization
 
-You can benefit from awesome **hot reloading** feature by using a *.babelrc* like
+#### Babel presets
+
+If you need more babel presets or plugins, other than
+[babel-preset-es2015] and [babel-preset-react],
+just install and add them to your *.babelrc*.
+
+#### Run a single example
+
+Suppose you have a *counter/* folder containing the official
+[redux/examples/counter][redux_counter] files.
+
+Add the following npm script
+
+```json
+    "example_counter": "budo -l -o -s static/bundle.js -d counter counter/index.js -- -t babelify",
+```
+
+Now you can run the example with
+
+```bash
+npm run example_counter
+```
+
+#### LiveReactload
+
+You can benefit from awesome **hot reloading** feature using [livereactload].
+
+Install depen
+
+```bash
+npm i --save-dev livereactload react-proxy@1.x babel-plugin-react-transform
+```
+
+Use a *.babelrc* like
 
 ```json
 {
@@ -109,44 +142,21 @@ Then add the following npm script to your *package.json*
 Now, launching `npm start` you can edit your code and it will be injected
 in your page without losing the state.
 
-## Customization
-
-### Babel presets
-
-If you need more babel presets or plugins, other than
-[babel-preset-es2015] and [babel-preset-react],
-just install and add them to your *.babelrc*.
-
-### Run a single example
-
-Suppose you have a *counter/* folder containing the official
-[redux/examples/counter][redux_counter] files.
-
-Add the following npm script
-
-```json
-    "example_counter": "budo -l -o -s static/bundle.js -d counter counter/index.js -- -t babelify",
-```
-
-Now you can run the example with
-
-```bash
-npm run example_counter
-```
-
 ## License
 
 [MIT](http://g14n.info/mit-license/)
 
 [babelify]: https://github.com/babel/babelify "babelify"
+[babel-cli]: https://www.npmjs.com/package/babel-cli "babel-cli"
 [babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
 [babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
-[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [react]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
 [redux]: http://redux.js.org/
-[redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [redux-thunk]: https://github.com/gaearon/redux-thunk "Redux thunk middleware"
+
+[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
+[redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
