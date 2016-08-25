@@ -6,13 +6,10 @@
     "npm": ">= 3"
   },
   "scripts": {
-    "prealert": "npm outdated",
-    "alert": "echo \"\nDependencies need update, run\n\n\tnpm run update-deps\n\"",
     "cp_babelrc": "[ -f ../../package.json ] && [ ! -f ../../.babelrc ] && cp .babelrc ../.. || exit 0",
     "postinstall": "npm run cp_babelrc",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
-    "pretest": "npm install",
-    "test": "[[ $(npm outdated) ]] && npm run alert || exit 0"
+    "test": "echo \"no test :P\" && exit 0"
   },
   "repository": {
     "type": "git",
