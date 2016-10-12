@@ -11,17 +11,17 @@
 This is an empty package, there is no code implementation, only a set of
 dependencies:
 
-* [babel-cli]
-* [babel-preset-es2015]
-* [babel-preset-react]
-* [babelify]
-* [browserify]
-* [budo]
-* [react]
-* [react-dom]
-* [react-redux]
-* [redux]
-* [redux-thunk]
+* [babel-cli]: `v6.x`
+* [babel-preset-es2015]: `v6.x`
+* [babel-preset-react]: `v6.x`
+* [babelify]: `v7.x`
+* [browserify]: `v13.x`
+* [budo]: `v9.x`
+* [react]: `v15.x`
+* [react-dom]: `v15.x`
+* [react-redux]: `v4.x`
+* [redux]: `v3.x`
+* [redux-thunk]: `v2.x`
 
 I am using [greenkeeper.io](https://greenkeeper.io) to keep dependencies up to date, then
 publish them as *patch* versions.
