@@ -71,7 +71,14 @@ Now, running `npm start` it will
 
 So, you can focus on your code now!
 
-### Customization
+See [example folder](example_folder) to see how it looks the classic Redux counter example.
+You can run it launching
+
+```bash
+npm explore zeroconf-redux npm run example
+```
+
+## Customization
 
 #### Babel presets
 
@@ -154,6 +161,6 @@ in your page without losing the state.
 [react]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
-[redux]: http://redux.js.org/
+[redux]: http://redux.js.org/ "Redux"
 [livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
