@@ -1,6 +1,6 @@
 # zeroconf-redux
 
-> is a minimal [redux][redux] dev stack, on top of [browserify] + [budo]
+> is a minimal [Redux][redux] dev stack, on top of [browserify] + [budo]
 
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux) [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
 
@@ -21,10 +21,9 @@ dependencies:
 * [react-dom]
 * [react-redux]
 * [redux]
-* [redux-thunk]
 
-I am using [greenkeeper.io](https://greenkeeper.io) to keep dependencies up to date, then
-publish them as *patch* versions.
+I am using [greenkeeper.io](https://greenkeeper.io) to keep dependencies up to date,
+then publish them as *patch* versions.
 
 ## Installation
 
@@ -156,7 +155,5 @@ in your page without losing the state.
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
 [redux]: http://redux.js.org/
-[redux-thunk]: https://github.com/gaearon/redux-thunk "Redux thunk middleware"
-
 [livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"

@@ -40,8 +40,7 @@
     "react": "15.x",
     "react-dom": "15.x",
     "react-redux": "4.x",
-    "redux": "3.x",
-    "redux-thunk": "2.x"
+    "redux": "3.x"
   },
   "devDependencies": {}
 }
