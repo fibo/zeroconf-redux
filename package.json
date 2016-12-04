@@ -1,7 +1,7 @@
 {
   "name": "zeroconf-redux",
   "version": "0.9.1",
-  "description": "is a minimal redux dev stack, on top of browserify + budo",
+  "description": "is a minimal React/Redux dev stack, on top of browserify + budo",
   "engines": {
     "npm": ">= 3"
   },

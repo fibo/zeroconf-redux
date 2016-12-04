@@ -1,6 +1,6 @@
 # zeroconf-redux
 
-> is a minimal [Redux][redux] dev stack, on top of [browserify] + [budo]
+> is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux) [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
 
@@ -17,10 +17,10 @@ dependencies:
 * [babelify]
 * [browserify]
 * [budo]
-* [react]
+* [react][React]
 * [react-dom]
 * [react-redux]
-* [redux]
+* [redux][Redux]
 
 I am using [greenkeeper.io](https://greenkeeper.io) to keep dependencies up to date,
 then publish them as *patch* versions.
@@ -159,9 +159,9 @@ in your page without losing the state.
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [example_folder]: https://github.com/fibo/zeroconf-redux/tree/master/example "example folder"
-[react]: https://facebook.github.io/react/ "React"
+[React]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
-[redux]: http://redux.js.org/ "Redux"
+[Redux]: http://redux.js.org/ "Redux"
 [livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
