@@ -71,7 +71,7 @@ Now, running `npm start` it will
 
 So, you can focus on your code now!
 
-See [example folder](example_folder) to see how it looks the classic Redux counter example.
+See [example folder][example_folder] to see how it looks the classic Redux counter example.
 You can run it launching
 
 ```bash
