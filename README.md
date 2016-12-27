@@ -11,11 +11,9 @@
 This is an empty package, there is no code implementation, only a set of
 dependencies:
 
-* [babel-cli]
 * [babel-preset-es2015]
 * [babel-preset-react]
 * [babelify]
-* [browserify]
 * [budo]
 * [react][React]
 * [react-dom]
@@ -67,7 +65,7 @@ Now, running `npm start` it will
 
 So, you can focus on your code now!
 
-In the [example/counter folder][counter_example] there is a copy of the [classic Redux counter example][redux_counter].
+In the [examples/counter folder][counter_example] there is a copy of the [classic Redux counter example][redux_counter].
 You can run it launching
 
 ```bash
@@ -83,6 +81,9 @@ If you need more babel presets or plugins, other than
 just install and add them to your *.babelrc*.
 
 #### LiveReactload
+
+**NOTA BENE** the instructions below work, but, they will be changed and
+updated when next HMR will be released.
 
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
@@ -132,12 +133,11 @@ in your page without losing the state.
 [MIT](http://g14n.info/mit-license/)
 
 [babelify]: https://github.com/babel/babelify "babelify"
-[babel-cli]: https://www.npmjs.com/package/babel-cli "babel-cli"
 [babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
 [babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
-[counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/example/counter "counter example"
+[counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
 [React]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
