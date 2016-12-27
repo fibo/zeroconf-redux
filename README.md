@@ -43,11 +43,7 @@ On `postinstall` a *.babelrc* is created, if it does not exists.
 It has the following content
 
 ```json
-{
-  "presets": [
-    "es2015", "react"
-  ]
-}
+{ "presets": [ "es2015", "react" ] }
 ```
 
 If you want to trigger it manually, you can run
@@ -71,11 +67,11 @@ Now, running `npm start` it will
 
 So, you can focus on your code now!
 
-See [example folder][example_folder] to see how it looks the classic Redux counter example.
+In the [example/counter folder][counter_example] there is a copy of the [classic Redux counter example][redux_counter].
 You can run it launching
 
 ```bash
-npm explore zeroconf-redux npm run example
+npm explore zeroconf-redux npm run example_counter
 ```
 
 ## Customization
@@ -86,28 +82,11 @@ If you need more babel presets or plugins, other than
 [babel-preset-es2015] and [babel-preset-react],
 just install and add them to your *.babelrc*.
 
-#### Run a single example
-
-Suppose you have a *counter/* folder containing the official
-[redux/examples/counter][redux_counter] files.
-
-Add the following npm script
-
-```json
-    "example_counter": "budo -l -o -s static/bundle.js -d counter counter/index.js -- -t babelify",
-```
-
-Now you can run the example with
-
-```bash
-npm run example_counter
-```
-
 #### LiveReactload
 
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
-Install depen
+Install dependencies
 
 ```bash
 npm i --save-dev livereactload react-proxy@1.x babel-plugin-react-transform
@@ -158,7 +137,7 @@ in your page without losing the state.
 [babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
-[example_folder]: https://github.com/fibo/zeroconf-redux/tree/master/example "example folder"
+[counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/example/counter "counter example"
 [React]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
