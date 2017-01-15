@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const pkg = require('./package.json')
 
 const upFolder = path.resolve(path.join(__dirname, '..', '..'))
 
