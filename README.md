@@ -36,12 +36,12 @@ npm install zeroconf-redux --save-dev
 
 ### Quick start
 
-Assumption: your project folder contains just two files: *index.js* and *index.html*.
+Assumption: your project folder contains files  *index.js* and *index.html*.
 
 Just install
 
 ```bash
-npm install zeroconf-redux
+npm i zeroconf-redux
 ```
 
 and launch the dev server with
@@ -52,6 +52,8 @@ node_modules/.bin/budo index.js --dir . --live --open -- -t babelify
 
 Your browser will open and you can start coding now!
 
+Read below for more details and instructions to improve this quick process and
+launch your dev server with a simple `npm start`.
 
 ### Use a package.json
 
@@ -61,7 +63,7 @@ If you have no *package.json* yet, I highly recommend to create one, for instanc
 npm init
 ```
 
-or even, for the lazy ones like me :), `npm init -y`.
+or even (for the lazy ones like me :^) `npm init -y`.
 
 Install and save it as a development dependency.
 
@@ -112,8 +114,7 @@ just install and add them to your *.babelrc*.
 
 #### LiveReactload
 
-**NOTA BENE** the instructions below work, but, they will be changed and
-updated when next HMR will be released.
+> **NOTA BENE** the instructions below work, but, they will be changed and updated when next HMR will be released.
 
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
