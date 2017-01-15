@@ -5,9 +5,8 @@ const pkg = require('./package.json')
 const upFolder = path.resolve(path.join(__dirname, '..', '..'))
 
 // Do nothing if package is installed globally.
-if (require('module').globalPaths.indexOf(upFolder) > -1) {
-  console.log(`${pkg.name} should be installed locally`)
-} else {
+if (require('module').globalPaths.indexOf(upFolder) === -1) {
+  // If package is installed locally, read arguments and proceed.
   const action = process.argv[2]
 
   if (action === 'copy') {
@@ -30,7 +29,7 @@ function copyIfItDoesNotExist (fileName) {
     if (pathStat.isFile()) {
       fs.stat(filePathUp, function (errUp, pathStatUp) {
         // If file does not exist, copy it.
-        if (errUp.code === 'ENOENT') {
+        if (errUp && errUp.code === 'ENOENT') {
           fs.createReadStream(filePath)
             .pipe(fs.createWriteStream(filePathUp))
             .on('error', console.error)
