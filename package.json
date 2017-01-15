@@ -6,9 +6,9 @@
     "npm": ">= 3"
   },
   "scripts": {
-    "cp_babelrc": "[ -f ../../package.json ] && [ ! -f ../../.babelrc ] && cp .babelrc ../.. || exit 0",
+    "copy_babelrc": "node postinstall.js copy .babelrc",
     "example_counter": "budo ./examples/counter/index.js:bundle.js --dir ./examples/counter --live --open -- -t babelify",
-    "postinstall": "npm run cp_babelrc",
+    "postinstall": "npm run copy_babelrc",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "test": "echo \"no test :P\" && exit 0"
   },
