@@ -2,13 +2,16 @@
 
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
-<img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Windows8-50.png" width="50" height="50" />
-
-[![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux) [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
-
 [Installation](#installation) |
 [Usage](#usage) |
 [License](#license)
+
+<img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Windows8-50.png" width="50" height="50" />
+
+[![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux)
+[![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
+
+[![NPM downloads](https://nodei.co/npm-dl/zeroconf-redux.png)](https://nodei.co/npm-dl/zeroconf-redux/)
 
 This is an empty package, there is almost no code implemented, only a set of dependencies:
 
