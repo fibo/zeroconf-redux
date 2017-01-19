@@ -166,6 +166,8 @@ in your page without losing the state.
 
 [MIT](http://g14n.info/mit-license/)
 
+<sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
+
 [babelify]: https://github.com/babel/babelify "babelify"
 [babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
 [babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
