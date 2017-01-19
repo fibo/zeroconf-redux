@@ -6,7 +6,7 @@
 [Usage](#usage) |
 [License](#license)
 
-<img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/zeroconf-redux/master/media/Windows8-50.png" width="50" height="50" />
+<img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Windows8-50.png" width="50" height="50" />
 
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux)
 [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
