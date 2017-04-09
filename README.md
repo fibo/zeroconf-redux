@@ -115,6 +115,19 @@ If you need more babel presets or plugins, other than
 [babel-preset-es2015] and [babel-preset-react],
 just install and add them to your *.babelrc*.
 
+#### Async Redux
+
+Probably you need to call an asynchronous API: the standard way is to use
+the [Redux Thunk middleware][redux-thunk], so you need to install
+
+```bash
+npm install redux-thunk --save
+```
+
+But this choice is up to you, since there are few alternatives this
+package does not include a middleware to dispatch async actions.
+See [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html) chapter on official Redux documentation for details.
+
 #### LiveReactload
 
 > **NOTA BENE** the instructions below work, but, they will be changed and updated when next HMR will be released.
@@ -180,3 +193,4 @@ in your page without losing the state.
 [Redux]: http://redux.js.org/ "Redux"
 [livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
+[redux-thunk]: https://github.com/gaearon/redux-thunk "Thunk middleware for Redux"
