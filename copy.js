@@ -5,19 +5,16 @@ const upFolder = path.resolve(path.join(__dirname, '..', '..'))
 
 // Do nothing if package is installed globally.
 if (require('module').globalPaths.indexOf(upFolder) === -1) {
-  // If package is installed locally, read arguments and proceed.
-  const action = process.argv[2]
+  // If package is installed locally, read argument and proceed.
+  const fileName = process.argv[2]
+  const fileNameDest = process.argv[3] || fileName
 
-  if (action === 'copy') {
-    const fileName = process.argv[3]
-
-    copyIfItDoesNotExist(fileName)
-  }
+  copyIfItDoesNotExist(fileName, fileNameDest)
 }
 
-function copyIfItDoesNotExist (fileName) {
+function copyIfItDoesNotExist (fileName, fileNameDest) {
   const filePath = path.join(__dirname, fileName)
-  const filePathUp = path.join(__dirname, '..', '..', fileName)
+  const filePathUp = path.join(__dirname, '..', '..', fileNameDest)
 
   fs.stat(filePath, function (err, pathStat) {
     if (err) {

@@ -130,46 +130,51 @@ See [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html) chapter
 
 #### LiveReactload
 
-> **NOTA BENE** the instructions below work, but, they will be changed and updated when next HMR will be released.
-
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
 Install dependencies
 
 ```bash
-npm i --save-dev livereactload react-proxy@1.x babel-plugin-react-transform
+npm i --save-dev livereactload@next
 ```
 
-Use a *.babelrc* like
+Use a *.babelrc* like the following
 
 ```json
 {
-  "presets": [
-    "es2015",
-    "react"
-  ],
-  "env": {
-    "development": {
-      "plugins": [
-        ["react-transform", {
-          "transforms": [{
-            "transform": "livereactload/babel-transform",
-            "imports": ["react"]
-          }]
-        }]
-      ]
-    }
-  }
+  "presets": ["es2015", "react"],
+  "plugins": ["react-hot-loader/babel"]
 }
 ```
 
+You can create it if you launch
+
+```bash
+npm explore zeroconf-redux npm run copy_babelrc_livereactload
+```
+
 Assuming your *index.js* creates the DOM element where you will mount your
-React app, probably you can omit the *index.html*.
+React app, you can omit the *index.html*. If you use `document.body`, for
+instance, when you create your application you need something like
+
+```javascript
+import React from 'react'
+import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import Component from './components/Component'
+
+render(
+  <AppContainer>
+    <Component />
+  </AppContainer>,
+  document.body
+)
+```
 
 Then add the following npm script to your *package.json*
 
 ```json
-"start": "BABEL_ENV=development NODE_PATH=. budo --open index.js -- -t babelify -p livereactload",
+"start": "NODE_PATH=. budo --open index.js -- -t babelify -p livereactload",
 ```
 
 Now, launching `npm start` you can edit your code and it will be injected
