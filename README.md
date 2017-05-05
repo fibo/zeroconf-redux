@@ -40,7 +40,7 @@ npm install zeroconf-redux --save-dev
 
 ### Quick start
 
-Assumption: your project folder contains files  *index.js* and *index.html*.
+Assumption: your project folder contains an *index.js* with a `console.log('Hello World')`.
 
 Just install
 
@@ -51,7 +51,7 @@ npm i zeroconf-redux
 and launch the dev server with
 
 ```bash
-node_modules/.bin/budo index.js --dir . --live --open -- -t babelify
+node_modules/.bin/budo index.js --live --open -- -t babelify
 ```
 
 Your browser will open and you can start coding now!
