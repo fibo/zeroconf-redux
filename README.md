@@ -56,8 +56,8 @@ node_modules/.bin/budo index.js --dir . --live --open -- -t babelify
 
 Your browser will open and you can start coding now!
 
-Read below for more details and instructions to improve this quick process and
-launch your dev server with a simple `npm start`.
+Read below for more details and instructions to improve this quick
+process and launch your dev server with a simple `npm start`.
 
 ### Use a package.json
 
@@ -88,11 +88,24 @@ If you want to trigger it manually, you can run
 npm explore zeroconf-redux npm run copy_babelrc
 ```
 
-Add an npm script to your *package.json*, to run [budo] dev server.
-For example
+Assuming there is an *index.html* in the same folder as the *package.json*
+with a content like the following...
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
+```
+
+... add an npm script to your *package.json*, to run [budo] dev server,
+something like
 
 ```json
-  "start": "budo index.js --dir . --live --open -- -t babelify",
+  "start": "budo index.js --dir . --serve bundle.js --live --open -- -t babelify",
 ```
 
 Now, running `npm start` it will
@@ -180,7 +193,7 @@ render(
 Then add the following npm script to your *package.json*
 
 ```json
-"start": "NODE_PATH=. budo --dir . --open index.js -- -t babelify -p livereactload",
+"start": "NODE_PATH=. budo --dir . -s bundle.js --open index.js -- -t babelify -p livereactload",
 ```
 
 Now, launching `npm start` you can edit your code and it will be injected
