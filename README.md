@@ -19,6 +19,7 @@ This is an empty package, there is almost no code implemented, only a set of dep
 * [babel-preset-react]
 * [babelify]
 * [budo]
+* [prop-types]
 * [react][React]
 * [react-dom]
 * [react-redux]
@@ -130,12 +131,19 @@ See [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html) chapter
 
 #### LiveReactload
 
+**NOTA BENE** the following instructions are still experimental, actually
+they do not work: I am waiting [this pull request will be solved](https://github.com/milankinen/livereactload/pull/153).
+
+Follows instructions to reproduce it.
+
+----
+
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
 Install dependencies
 
 ```bash
-npm i --save-dev livereactload@next
+npm i --save-dev livereactload@next react-hot-loader@next
 ```
 
 Use a *.babelrc* like the following
@@ -150,12 +158,13 @@ Use a *.babelrc* like the following
 You can create it if you launch
 
 ```bash
+rm .babelrc
 npm explore zeroconf-redux npm run copy_babelrc_livereactload
 ```
 
 Assuming your *index.js* creates the DOM element where you will mount your
-React app, you can omit the *index.html*. If you use `document.body`, for
-instance, when you create your application you need something like
+React app, you can omit the *index.html*. When you create your application
+you need something like
 
 ```javascript
 import React from 'react'
@@ -163,11 +172,14 @@ import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import Component from './components/Component'
 
+const root = document.createElement(root)
+document.body.appendChild(root)
+
 render(
   <AppContainer>
     <Component />
   </AppContainer>,
-  document.body
+  root
 )
 ```
 
@@ -192,6 +204,7 @@ in your page without losing the state.
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
+[prop-types]: https://github.com/reactjs/prop-types "prop-types"
 [React]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
