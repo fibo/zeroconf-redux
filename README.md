@@ -131,19 +131,12 @@ See [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html) chapter
 
 #### LiveReactload
 
-**NOTA BENE** the following instructions are still experimental, actually
-they do not work: I am waiting [this pull request will be solved](https://github.com/milankinen/livereactload/pull/153).
-
-Follows instructions to reproduce it.
-
-----
-
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
 Install dependencies
 
 ```bash
-npm i --save-dev livereactload@next react-hot-loader@next
+npm install livereactload@next react-hot-loader@next
 ```
 
 Use a *.babelrc* like the following
@@ -162,9 +155,11 @@ rm .babelrc
 npm explore zeroconf-redux npm run copy_babelrc_livereactload
 ```
 
-Assuming your *index.js* creates the DOM element where you will mount your
-React app, you can omit the *index.html*. When you create your application
-you need something like
+I assume you have an *index.html*, with a `div` having an *app* id. Note
+that your code must be idempotent in order to let [livereactload] do its
+magic, see [more details here](https://github.com/milankinen/livereactload/pull/153#issuecomment-299560608).
+
+When you create your application you need something like
 
 ```javascript
 import React from 'react'
@@ -172,8 +167,7 @@ import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import Component from './components/Component'
 
-const root = document.createElement(root)
-document.body.appendChild(root)
+const root = document.getElementById('app')
 
 render(
   <AppContainer>
@@ -186,7 +180,7 @@ render(
 Then add the following npm script to your *package.json*
 
 ```json
-"start": "NODE_PATH=. budo --open index.js -- -t babelify -p livereactload",
+"start": "NODE_PATH=. budo --dir . --open index.js -- -t babelify -p livereactload",
 ```
 
 Now, launching `npm start` you can edit your code and it will be injected
