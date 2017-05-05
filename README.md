@@ -193,7 +193,7 @@ render(
 Then add the following npm script to your *package.json*
 
 ```json
-"start": "NODE_PATH=. budo --dir . -s bundle.js --open index.js -- -t babelify -p livereactload",
+"start": "NODE_PATH=. budo -d . -s bundle.js -o index.js -- -t babelify -p livereactload",
 ```
 
 Now, launching `npm start` you can edit your code and it will be injected
