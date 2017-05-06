@@ -121,7 +121,7 @@ You can run it with this command
 npm explore zeroconf-redux npm run example_counter
 ```
 
-## Customization
+### Customization
 
 #### Babel presets
 
