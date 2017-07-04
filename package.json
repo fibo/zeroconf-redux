@@ -41,10 +41,10 @@
     "babelify": "^7.3.0",
     "budo": "^10.0.3",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
-    "redux": "^3.6.0"
+    "redux": "^3.7.1"
   },
   "devDependencies": {}
 }
