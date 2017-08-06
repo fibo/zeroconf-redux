@@ -18,7 +18,7 @@
 Few assumptions: your current working directory contains
 
 1. a *package.json*, if not launch `npm init -y`.
-2. an index.js that is your entry file: `echo "console.log('ok')" > index.js` is enough to start.
+2. an index.js that is your entry file: `echo "alert('ok')" > index.js` is enough to start.
 
 Now you can run
 
