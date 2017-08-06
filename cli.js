@@ -5,27 +5,27 @@ const babelify = require('babelify')
 const fs = require('fs')
 const path = require('path')
 
-const packageJson = path.join(process.cwd(), 'package.json')
-const entry = 'index.js'
+const babelrc = path.join(__dirname, '.babelrc')
+const babelrcDest = path.join(process.cwd(), '.babelrc')
 
-fs.stat(packageJson, function (err, pathStat) {
-  // File package.json is required.
+function launchBudo () {
+  const entry = 'index.js'
+
+  budo(entry, {
+    browserify: { transform: babelify },
+    live: true,
+    open: true,
+    stream: process.stdout
+  })
+}
+
+fs.stat(babelrcDest, function (err, pathStat) {
+  // Create .babelrc file.
   if (err && err.code === 'ENOENT') {
-    console.error(`
-Could not find package.json file, try creating one with
-
-  npm init -y
-
-`)
-    process.exit(0)
-  }
-
-  if (pathStat.isFile()) {
-    budo(entry, {
-      browserify: { transform: babelify },
-      live: true,
-      open: true,
-      stream: process.stdout
-    })
+    fs.createReadStream(babelrc)
+      .pipe(fs.createWriteStream(babelrcDest))
+      .on('error', console.error)
+  } else if (pathStat.isFile()) {
+    launchBudo()
   }
 })

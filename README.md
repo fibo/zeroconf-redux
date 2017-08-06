@@ -2,6 +2,8 @@
 
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
+**UPDATE** 🎉: v2 contains brand new React v16 and npx goodies 😎.
+
 [Quick start](#quick-start) |
 [Installation](#installation) |
 [Usage](#usage) |
@@ -15,10 +17,9 @@
 
 ## Quick start
 
-Few assumptions: your current working directory contains
-
-1. a *package.json*, if not launch `npm init -y`.
-2. an index.js that is your entry file: `echo "alert('ok')" > index.js` is enough to start.
+One only assumption: your *current working directory* contains
+an **index.js** that is your entry file:
+`echo "alert('ok')" > index.js` is enough to start.
 
 Now you can run
 
@@ -26,7 +27,7 @@ Now you can run
 npx zeroconf-redux
 ```
 
-Your browser will open and you can start coding your [React]/[Redux] awesome web app!
+Your browser will open and you can start coding your [React]/[Redux] awesome web app now!
 
 Read below for more details and instructions to improve this quick
 process and launch your dev server with a simple `npm start`.
@@ -45,7 +46,6 @@ The following dependencies will be installed:
 * [babel-preset-react]
 * [babelify]
 * [budo]
-* [prop-types]
 * [react][React]
 * [react-dom]
 * [react-redux]
@@ -198,7 +198,6 @@ in your page without losing the state.
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
-[prop-types]: https://github.com/reactjs/prop-types "prop-types"
 [React]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"

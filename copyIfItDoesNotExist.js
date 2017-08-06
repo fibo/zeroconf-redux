@@ -1,10 +1,6 @@
 const fs = require('fs')
-const path = require('path')
 
-function copyIfItDoesNotExist (dirname, fileName, fileNameDest) {
-  const filePath = path.join(dirname, fileName)
-  const filePathUp = path.join(dirname, '..', '..', fileNameDest)
-
+function copyIfItDoesNotExist (filePath, filePathDest) {
   fs.stat(filePath, function (err, pathStat) {
     if (err) {
       console.error(err)
@@ -12,11 +8,11 @@ function copyIfItDoesNotExist (dirname, fileName, fileNameDest) {
     }
 
     if (pathStat.isFile()) {
-      fs.stat(filePathUp, function (errUp, pathStatUp) {
+      fs.stat(filePathDest, function (errUp, pathStatUp) {
         // If file does not exist, copy it.
         if (errUp && errUp.code === 'ENOENT') {
           fs.createReadStream(filePath)
-            .pipe(fs.createWriteStream(filePathUp))
+            .pipe(fs.createWriteStream(filePathDest))
             .on('error', console.error)
         }
       })
