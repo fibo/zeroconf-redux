@@ -25,6 +25,7 @@ fs.stat(babelrcDest, function (err, pathStat) {
     fs.createReadStream(babelrc)
       .pipe(fs.createWriteStream(babelrcDest))
       .on('error', console.error)
+      .on('clone', launchBudo)
   } else if (pathStat.isFile()) {
     launchBudo()
   }
