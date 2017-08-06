@@ -3,9 +3,8 @@
   "version": "1.2.0",
   "description": "is a minimal React/Redux dev stack, on top of browserify + budo",
   "engines": {
-    "npm": ">= 3"
+    "npm": ">= 5"
   },
-  "bin": "cli.js",
   "scripts": {
     "copy_babelrc": "node copy.js .babelrc",
     "copy_babelrc_livereactload": "node copy.js .babelrc_livereactload .babelrc",

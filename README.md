@@ -2,10 +2,9 @@
 
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
-**UPDATE** 🎉: v2 contains brand new React v16 and npx goodies 😎.
+**UPDATE** 🎉: v2 contains brand new React v16 😎
 
 [Quick start](#quick-start) |
-[Installation](#installation) |
 [Usage](#usage) |
 [Customization](#customization) |
 [License](#license)
@@ -24,7 +23,8 @@ an **index.js** that is your entry file:
 Now you can run
 
 ```bash
-npx zeroconf-redux
+npm install zeroconf-redux
+npx budo
 ```
 
 Your browser will open and you can start coding your [React]/[Redux] awesome web app now!
@@ -32,9 +32,12 @@ Your browser will open and you can start coding your [React]/[Redux] awesome web
 Read below for more details and instructions to improve this quick
 process and launch your dev server with a simple `npm start`.
 
-## Installation
+## Usage
 
-With [npm] do
+If you have no *package.json* yet, create one now! For instance with
+`npm init` or even (for the lazy ones like me :^) `npm init -y`.
+
+Then with [npm] do
 
 ```bash
 npm install zeroconf-redux --save-dev
@@ -50,17 +53,6 @@ The following dependencies will be installed:
 * [react-dom]
 * [react-redux]
 * [redux][Redux]
-
-## Usage
-
-If you have no *package.json* yet, create one now! For instance with
-`npm init` or even (for the lazy ones like me :^) `npm init -y`.
-
-Install and save it as a development dependency.
-
-```bash
-npm install zeroconf-redux --save-dev
-```
 
 On `postinstall` a *.babelrc* is created, if it does not exists.
 It has the following content
