@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 
-function copyIfItDoesNotExist (fileName, fileNameDest) {
-  const filePath = path.join(__dirname, fileName)
-  const filePathUp = path.join(__dirname, '..', '..', fileNameDest)
+function copyIfItDoesNotExist (dirname, fileName, fileNameDest) {
+  const filePath = path.join(dirname, fileName)
+  const filePathUp = path.join(dirname, '..', '..', fileNameDest)
 
   fs.stat(filePath, function (err, pathStat) {
     if (err) {

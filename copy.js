@@ -15,5 +15,5 @@ if (isInstalledLocally) {
   const fileName = process.argv[2]
   const fileNameDest = process.argv[3] || fileName
 
-  copyIfItDoesNotExist(fileName, fileNameDest)
+  copyIfItDoesNotExist(__dirname, fileName, fileNameDest)
 }
