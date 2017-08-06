@@ -5,6 +5,7 @@
   "engines": {
     "npm": ">= 3"
   },
+  "bin": "cli.js",
   "scripts": {
     "copy_babelrc": "node copy.js .babelrc",
     "copy_babelrc_livereactload": "node copy.js .babelrc_livereactload .babelrc",

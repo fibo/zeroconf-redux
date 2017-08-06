@@ -2,8 +2,10 @@
 
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
+[Quick start](#quick-start) |
 [Installation](#installation) |
 [Usage](#usage) |
+[Customization](#customization) |
 [License](#license)
 
 <img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Windows8-50.png" width="50" height="50" />
@@ -11,9 +13,28 @@
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux)
 [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
 
-[![NPM downloads](https://nodei.co/npm-dl/zeroconf-redux.png)](https://nodei.co/npm-dl/zeroconf-redux/)
+## Quick start
 
-This is an empty package, there is almost no code implemented, only a set of dependencies:
+Just run
+
+```bash
+npx zeroconf-redux
+```
+
+Your browser will open and you can start coding now!
+
+Read below for more details and instructions to improve this quick
+process and launch your dev server with a simple `npm start`.
+
+## Installation
+
+With [npm] do
+
+```bash
+npm install zeroconf-redux --save-dev
+```
+
+The following dependencies will be installed:
 
 * [babel-preset-es2015]
 * [babel-preset-react]
@@ -25,46 +46,10 @@ This is an empty package, there is almost no code implemented, only a set of dep
 * [react-redux]
 * [redux][Redux]
 
-## Installation
-
-With [npm v3](https://npmjs.org/) do
-
-```bash
-npm install zeroconf-redux --save-dev
-```
-
 ## Usage
 
-### Quick start
-
-Assumption: your project folder contains an *index.js* with a `console.log('Hello World')`.
-
-Just install
-
-```bash
-npm i zeroconf-redux
-```
-
-and launch the dev server with
-
-```bash
-node_modules/.bin/budo index.js --live --open -- -t babelify
-```
-
-Your browser will open and you can start coding now!
-
-Read below for more details and instructions to improve this quick
-process and launch your dev server with a simple `npm start`.
-
-### Use a package.json
-
-If you have no *package.json* yet, I highly recommend to create one, for instance with
-
-```bash
-npm init
-```
-
-or even (for the lazy ones like me :^) `npm init -y`.
+If you have no *package.json* yet, create one now! For instance with
+`npm init` or even (for the lazy ones like me :^) `npm init -y`.
 
 Install and save it as a development dependency.
 
@@ -102,7 +87,7 @@ with a content like the following...
 something like
 
 ```json
-  "start": "budo index.js --dir . --serve bundle.js --live --open -- -t babelify",
+    "start": "budo index.js --dir . --serve bundle.js --live --open -- -t babelify",
 ```
 
 Now, running `npm start` it will
@@ -118,15 +103,15 @@ You can run it with this command
 npm explore zeroconf-redux npm run example_counter
 ```
 
-### Customization
+## Customization
 
-#### Babel presets
+### Babel presets
 
 If you need more babel presets or plugins, other than
 [babel-preset-es2015] and [babel-preset-react],
 just install and add them to your *.babelrc*.
 
-#### Async Redux
+### Async Redux
 
 Probably you need to call an asynchronous API: the standard way is to use
 the [Redux Thunk middleware][redux-thunk], so you need to install
@@ -139,7 +124,7 @@ But this choice is up to you, since there are few alternatives this
 package does not include a middleware to dispatch async actions.
 See [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html) chapter on official Redux documentation for details.
 
-#### LiveReactload
+### LiveReactload
 
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
@@ -216,3 +201,4 @@ in your page without losing the state.
 [livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [redux-thunk]: https://github.com/gaearon/redux-thunk "Thunk middleware for Redux"
+[npm]: https://npmjs.org/ "npm"
