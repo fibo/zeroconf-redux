@@ -2,6 +2,7 @@
   "name": "zeroconf-redux",
   "version": "1.2.0",
   "description": "is a minimal React/Redux dev stack, on top of browserify + budo",
+  "bin": "./cli.js",
   "engines": {
     "npm": ">= 5"
   },

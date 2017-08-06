@@ -24,7 +24,7 @@ Now you can run
 
 ```bash
 npm install zeroconf-redux
-npx budo
+npx zeroconf-redux
 ```
 
 Your browser will open and you can start coding your [React]/[Redux] awesome web app now!
