@@ -190,7 +190,7 @@ in your page without losing the state.
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
-[React]: https://facebook.github.io/react/ "React"
+[React]: https://reactjs.org/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
 [Redux]: http://redux.js.org/ "Redux"
