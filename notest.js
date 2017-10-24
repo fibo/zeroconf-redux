@@ -1,4 +1,7 @@
-// This package contains only a set of dependencies. The only code implemented
-// can be tested only with a functional test. There is no unit test in this
-// package but I want to make greenkeeper.io happy :)
-console.log('this is not a test')
+console.log(`
+This is not a test.
+
+This package contains a set of dependencies.
+The features implemented can be tested only with functional tests.
+There is no unit test in this package.
+`)
