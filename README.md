@@ -11,10 +11,10 @@
 
 [![Whatchers](http://g14n.info/svg/github/watchers/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/watchers) [![Stargazers](http://g14n.info/svg/github/stars/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/stargazers) [![Forks](http://g14n.info/svg/github/forks/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/network/members)
 
-<img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Windows8-50.png" width="50" height="50" />
-
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux)
 [![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
+
+<img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Windows8-50.png" width="50" height="50" />
 
 ## Quick start
 
