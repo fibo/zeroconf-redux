@@ -9,7 +9,7 @@
   "scripts": {
     "copy_babelrc": "node copy.js .babelrc",
     "copy_babelrc_livereactload": "node copy.js .babelrc_livereactload .babelrc",
-    "example_counter": "budo ./examples/counter/index.js:bundle.js --dir ./examples/counter --live --open -- -t babelify",
+    "example_counter": "budo ./examples/counter/index.js:bundle.js --dir ./examples/counter --open -- -t babelify",
     "postinstall": "npm run copy_babelrc",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "test": "node notest.js"

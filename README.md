@@ -100,7 +100,21 @@ with a content like the following...
 something like
 
 ```json
-    "start": "budo index.js --dir . --serve bundle.js --live --open -- -t babelify",
+    "start": "budo index.js --dir . --serve bundle.js --open -- -t babelify",
+```
+
+Your *index.js* looks something like
+
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+ReactDOM.render(
+  <div>
+    You can start coding <em>index.js</em> file.
+  </div>,
+  document.getElementById('root')
+)
 ```
 
 Now, running `npm start` it will
