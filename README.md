@@ -2,7 +2,9 @@
 
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
-**UPDATE** 🎉: v2 contains brand new React v16 😎
+**UPDATES** 🎉:
+  - v3 brings super 😸 exciting [babel-preset-env]
+  - v2 contains brand new [React] v16 😎
 
 [Quick start](#quick-start) |
 [Usage](#usage) |
@@ -61,7 +63,7 @@ npm install zeroconf-redux --save-dev
 The following dependencies will be installed:
 
 * [babel-core]
-* [babel-preset-es2015]
+* [babel-preset-env]
 * [babel-preset-react]
 * [babelify]
 * [budo]
@@ -74,7 +76,7 @@ On `postinstall` a *.babelrc* is created, if it does not exists.
 It has the following content
 
 ```json
-{ "presets": [ "es2015", "react" ] }
+{ "presets": [ "env", "react" ] }
 ```
 
 If you want to trigger it manually, you can run
@@ -132,11 +134,21 @@ npm explore zeroconf-redux npm run example_counter
 
 ## Customization
 
-### Babel presets
+### Babel preset env
 
-If you need more babel presets or plugins, other than
-[babel-preset-es2015] and [babel-preset-react],
-just install and add them to your *.babelrc*.
+> By targeting specific browsers, Babel can do less work so you can ship native ES2015+ 😎!
+
+For example, you may edit your *.babelrc* to target specific chrome version
+
+```json
+{
+  "presets": [
+    ["env", { "targets": { "chrome": "60" } }]
+  ]
+}
+```
+
+For more details see [babel-preset-env].
 
 ### Async Redux
 
@@ -165,7 +177,7 @@ Use a *.babelrc* like the following
 
 ```json
 {
-  "presets": ["es2015", "react"],
+  "presets": ["env", "react"],
   "plugins": ["react-hot-loader/babel"]
 }
 ```
@@ -216,16 +228,16 @@ in your page without losing the state.
 
 [babelify]: https://github.com/babel/babelify "babelify"
 [babel-core]: https://www.npmjs.com/package/babel-core "babel-core"
-[babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
+[babel-preset-env]: http://babeljs.io/env "Babel env preset"
 [babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
+[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [React]: https://reactjs.org/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
 [Redux]: http://redux.js.org/ "Redux"
-[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [redux-thunk]: https://github.com/gaearon/redux-thunk "Thunk middleware for Redux"
 [npm]: https://npmjs.org/ "npm"
