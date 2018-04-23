@@ -3,7 +3,7 @@
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
 **UPDATES** 🎉:
-  - v3 brings super 😸 exciting [babel-preset-env]
+  - v3 brings super 😸 exciting [babel-preset-env] and [Redux] v4
   - v2 contains brand new [React] v16 😎
 
 [Quick start](#quick-start) |
