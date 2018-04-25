@@ -8,7 +8,7 @@
 
 [Quick start](#quick-start) |
 [Usage](#usage) |
-[Build](#build) |
+[Production build](#production-build) |
 [Customization](#customization) |
 [License](#license)
 
@@ -135,7 +135,7 @@ You can run it with this command
 npm explore zeroconf-redux npm run example_counter
 ```
 
-## Build
+## Production build
 
 Following instructions from [official React documentation](https://reactjs.org/docs/optimizing-performance.html#browserify), suppose your entry file is
 *src/index.js* and you bundle file is *dist/NAME.min.js*, where *NAME* is
