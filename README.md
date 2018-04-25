@@ -66,10 +66,13 @@ The following dependencies will be installed:
 * [babel-preset-react]
 * [babelify]
 * [budo]
+* [envify]
 * [react][React]
 * [react-dom]
 * [react-redux]
 * [redux][Redux]
+* [UglifyJS]
+* [uglifyify]
 
 On `postinstall` a *.babelrc* is created, if it does not exists.
 It has the following content
@@ -129,6 +132,16 @@ You can run it with this command
 
 ```bash
 npm explore zeroconf-redux npm run example_counter
+```
+
+## Build
+
+Following instructions from [official React documentation](https://reactjs.org/docs/optimizing-performance.html#browserify), suppose your entry file is
+*src/index.js* and you bundle file is *dist/NAME.min.js*, where *NAME* is
+your package name, you could add an npm script like the following
+
+```json
+    "browserify": "browserify src/index.js -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > docs/{packge_name}.min.js",
 ```
 
 ## Customization
@@ -233,6 +246,7 @@ in your page without losing the state.
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
+[envify]: https://github.com/hughsk/envify "envify"
 [livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
 [React]: https://reactjs.org/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
@@ -241,3 +255,6 @@ in your page without losing the state.
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [redux-thunk]: https://github.com/gaearon/redux-thunk "Thunk middleware for Redux"
 [npm]: https://npmjs.org/ "npm"
+[uglifyify]: https://github.com/hughsk/uglifyify "uglifyify"
+[UglifyJS]:  https://github.com/mishoo/UglifyJS
+
