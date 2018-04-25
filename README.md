@@ -8,6 +8,7 @@
 
 [Quick start](#quick-start) |
 [Usage](#usage) |
+[Build](#build) |
 [Customization](#customization) |
 [License](#license)
 
