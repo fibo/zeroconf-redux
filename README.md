@@ -142,7 +142,7 @@ Following instructions from [official React documentation](https://reactjs.org/d
 your package name, you could add an npm script like the following
 
 ```json
-    "browserify": "browserify src/index.js -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/{packge_name}.min.js",
+    "browserify": "browserify src/index.js -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
 ```
 
 ## Customization
