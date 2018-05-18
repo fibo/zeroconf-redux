@@ -173,66 +173,8 @@ the [Redux Thunk middleware][redux-thunk], so you need to install
 npm install redux-thunk --save
 ```
 
-But this choice is up to you, since there are few alternatives this
-package does not include a middleware to dispatch async actions.
-See [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html) chapter on official Redux documentation for details.
-
-### LiveReactload
-
-You can benefit from awesome **hot reloading** feature using [livereactload].
-
-Install dependencies
-
-```bash
-npm install livereactload@next react-hot-loader@next
-```
-
-Use a *.babelrc* like the following
-
-```json
-{
-  "presets": ["env", "react"],
-  "plugins": ["react-hot-loader/babel"]
-}
-```
-
-You can create it if you launch
-
-```bash
-rm .babelrc
-npm explore zeroconf-redux npm run copy_babelrc_livereactload
-```
-
-I assume you have an *index.html*, with a `div` having an *app* id. Note
-that your code must be idempotent in order to let [livereactload] do its
-magic, see [more details here](https://github.com/milankinen/livereactload/pull/153#issuecomment-299560608).
-
-When you create your application you need something like
-
-```javascript
-import React from 'react'
-import { render } from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
-import Component from './components/Component'
-
-const root = document.getElementById('app')
-
-render(
-  <AppContainer>
-    <Component />
-  </AppContainer>,
-  root
-)
-```
-
-Then add the following npm script to your *package.json*
-
-```json
-"start": "NODE_PATH=. budo -d . -s bundle.js -o index.js -- -t babelify -p livereactload",
-```
-
-Now, launching `npm start` you can edit your code and it will be injected
-in your page without losing the state.
+This choice is up to you. For example you could prefer [redux-saga].
+Since there are few alternatives this package does not include a middleware to dispatch async actions. See [Async Actions chapter on official Redux documentation][AsyncActions] for details.
 
 ## License
 
@@ -240,6 +182,7 @@ in your page without losing the state.
 
 <sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
 
+[AsyncActions]: http://redux.js.org/docs/advanced/AsyncActions.html "Async Actions Redux documentation"
 [babelify]: https://github.com/babel/babelify "babelify"
 [babel-core]: https://www.npmjs.com/package/babel-core "babel-core"
 [babel-preset-env]: http://babeljs.io/env "Babel env preset"
@@ -248,7 +191,7 @@ in your page without losing the state.
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
 [envify]: https://github.com/hughsk/envify "envify"
-[livereactload]: https://github.com/milankinen/livereactload "LiveReactload"
+[redux-saga]: https://redux-saga.js.org/ "Redux-Saga"
 [React]: https://reactjs.org/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
