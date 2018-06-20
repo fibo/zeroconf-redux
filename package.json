@@ -40,13 +40,13 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babelify": "^8.0.0",
-    "budo": "^11.2.1",
+    "budo": "^11.3.0",
     "envify": "^4.1.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
-    "uglify-js": "^3.3.25",
+    "uglify-js": "^3.4.1",
     "uglifyify": "^5.0.0"
   },
   "devDependencies": {}
