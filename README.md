@@ -64,6 +64,7 @@ The following dependencies will be installed:
 
 * [babel-core]
 * [babel-preset-env]
+* [babel-preset-es2015]
 * [babel-preset-react]
 * [babelify]
 * [budo]
@@ -79,7 +80,7 @@ On `postinstall` a *.babelrc* is created, if it does not exists.
 It has the following content
 
 ```json
-{ "presets": [ "env", "react" ] }
+{ "presets": [ "env", "es2015", "react" ] }
 ```
 
 If you want to trigger it manually, you can run
@@ -186,6 +187,7 @@ Since there are few alternatives this package does not include a middleware to d
 [babelify]: https://github.com/babel/babelify "babelify"
 [babel-core]: https://www.npmjs.com/package/babel-core "babel-core"
 [babel-preset-env]: http://babeljs.io/env "Babel env preset"
+[babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
 [babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
