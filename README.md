@@ -138,12 +138,13 @@ npm explore zeroconf-redux npm run example_counter
 
 ## Production build
 
-Following instructions from [official React documentation](https://reactjs.org/docs/optimizing-performance.html#browserify), suppose your entry file is
-*src/index.js* and you bundle file is *dist/NAME.min.js*, where *NAME* is
+Following instructions from [official React documentation](https://reactjs.org/docs/optimizing-performance.html#browserify), suppose
+your package main attribute points to your entry file, for instance *src/index.js*,
+and your bundle file is *dist/NAME.min.js*, where *NAME* is
 your package name, you could add an npm script like the following
 
 ```json
-    "browserify": "browserify src/index.js -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
+    "browserify": "browserify ${npm_package_name} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
 ```
 
 ## Customization
