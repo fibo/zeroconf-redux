@@ -144,7 +144,7 @@ and your bundle file is *dist/NAME.min.js*, where *NAME* is
 your package name, you could add an npm script like the following
 
 ```json
-    "browserify": "browserify ${npm_package_name} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
+    "browserify": "browserify ${npm_package_main} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
 ```
 
 ## Customization
