@@ -24,7 +24,11 @@
     "redux",
     "fast",
     "development",
-    "prototyping"
+    "prototyping",
+    "zero",
+    "conf",
+    "config",
+    "configuration"
   ],
   "author": {
     "name": "Gianluca Casati",
