@@ -3,7 +3,8 @@
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
 **UPDATES**:
-  - v3 brings super exciting [babel-preset-env] and [Redux] v4
+  - v4 adds [browserslist] support and switch to babel v7 namespaced packages
+  - v3 brings super exciting [@babel/preset-env] and [Redux] v4
   - v2 contains brand new [React] v16
 
 [Quick start](#quick-start) |
@@ -62,11 +63,11 @@ npm install zeroconf-redux --save-dev
 
 The following dependencies will be installed:
 
-* [babel-core]
-* [babel-preset-env]
-* [babel-preset-es2015]
-* [babel-preset-react]
+* [@babel/core]
+* [@babel/preset-env]
+* [@babel/preset-react]
 * [babelify]
+* [browserslist]
 * [budo]
 * [envify]
 * [react][React]
@@ -76,21 +77,13 @@ The following dependencies will be installed:
 * [UglifyJS]
 * [uglifyify]
 
-On `postinstall` a *.babelrc* is created, if it does not exists.
-It has the following content
+On `postinstall` the following files are created, if they do not exist:
 
-```json
-{ "presets": [ "env", "es2015", "react" ] }
-```
+* *.babelrc*
+* *.browserslistrc*
+* *index.js*
 
-If you want to trigger it manually, you can run
-
-```bash
-npm explore zeroconf-redux npm run copy_babelrc
-```
-
-Assuming there is an *index.html* in the same folder as the *package.json*
-with a content like the following...
+Assuming there is an *index.html* in the same folder as the *package.json* with a content like the following...
 
 ```html
 <!DOCTYPE html>
@@ -106,7 +99,7 @@ with a content like the following...
 something like
 
 ```json
-    "start": "budo index.js --dir . --serve bundle.js --open -- -t babelify",
+    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open -- -t babelify",
 ```
 
 Your *index.js* looks something like
@@ -139,7 +132,7 @@ npm explore zeroconf-redux npm run example_counter
 ## Production build
 
 Following instructions from [official React documentation](https://reactjs.org/docs/optimizing-performance.html#browserify), suppose
-your package main attribute points to your entry file, for instance *src/index.js*,
+your package main attribute points to your entry file, for instance *index.js*,
 and your bundle file is *dist/NAME.min.js*, where *NAME* is
 your package name, you could add an npm script like the following
 
@@ -149,22 +142,57 @@ your package name, you could add an npm script like the following
 
 ## Customization
 
+### src folder
+
+You may want to organize your code into a *src/* folder, if so, do
+
+```bash
+mkdir src
+mv index.js src/
+```
+
+Then edit your *package.json*
+
+```json
+  "main": "src/index.js"
+```
+
+For sure it is also a good idea to create a *src/components/* folder and a *Root.js* implementing your `<Root />` component.
+By the way, I like to start almost from scratch with the structure I feel more inspiring for that project.
+For example; if hosted on *Heroku* I create a *public/* folder; if hosted on *AWS* I like more a *bucket/* or (in some cases) *buckets/* folder.
+Programming is a creative process, **you know**.
+
 ### Babel preset env
 
-> By targeting specific browsers, Babel can do less work so you can ship native ES2015+ 😎!
-
-For example, you may edit your *.babelrc* to target specific chrome version
-
+Default *.babelrc* created on *postinstall* is the following.
 ```json
 {
   "presets": [
-    ["env", { "targets": { "chrome": "60" } }],
-    "react"
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ]
   ]
 }
 ```
 
-For more details see [babel-preset-env].
+You may want to customize it, for more details see [babel-preset-env].
+
+### Browserslist
+
+Default *.browserslist* created on *postinstall* is the following.
+
+```
+> 0.5%
+last 2 versions
+Firefox ESR
+not dead
+```
+
+You may want to edit target browsers, for more details see [browserslist].
 
 ### Async Redux
 
@@ -176,7 +204,31 @@ npm install redux-thunk --save
 ```
 
 This choice is up to you. For example you could prefer [redux-saga].
-Since there are few alternatives this package does not include a middleware to dispatch async actions. See [Async Actions chapter on official Redux documentation][AsyncActions] for details.
+Since there are few alternatives this package does not include a middleware to dispatch async actions.
+See [Async Actions chapter on official Redux documentation][AsyncActions] for details.
+In my opinion [redux-thunk] is a really good choice: it is stable, battle tested, has a very good documentation and a *flat learning curve*.
+
+### Linter
+
+It is strongly recommended to lint your code. Do not think it too much, just launch
+
+```bash
+npm i pre-commit standard -D
+```
+
+and add the following to your *package.json*
+
+```json
+  "scripts": {
+    "lint": "standard"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+```
+
+Now on every commit, you will check the code with [standard] linter.
+Ok ok, if you like semicolons you can use [semistandard].
 
 ## License
 
@@ -185,11 +237,11 @@ Since there are few alternatives this package does not include a middleware to d
 <sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
 
 [AsyncActions]: http://redux.js.org/docs/advanced/AsyncActions.html "Async Actions Redux documentation"
+[browserslist]: https://github.com/browserslist/browserslist "Browserslist"
 [babelify]: https://github.com/babel/babelify "babelify"
 [babel-core]: https://www.npmjs.com/package/babel-core "babel-core"
-[babel-preset-env]: http://babeljs.io/env "Babel env preset"
-[babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
-[babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
+[@babel/preset-env]: http://babeljs.io/env "Babel env preset"
+[@babel/preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
@@ -201,6 +253,8 @@ Since there are few alternatives this package does not include a middleware to d
 [Redux]: http://redux.js.org/ "Redux"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [redux-thunk]: https://github.com/gaearon/redux-thunk "Thunk middleware for Redux"
+[semistandard]: https://github.com/Flet/semistandard "Semi-Standard JS"
+[standard]: https://standardjs.com/ "Standard JS"
 [npm]: https://npmjs.org/ "npm"
 [uglifyify]: https://github.com/hughsk/uglifyify "uglifyify"
 [UglifyJS]:  https://github.com/mishoo/UglifyJS
