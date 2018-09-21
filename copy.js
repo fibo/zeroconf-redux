@@ -2,9 +2,9 @@ const path = require('path')
 
 const copyIfItDoesNotExist = require('./copyIfItDoesNotExist')
 
-const upFolder = path.resolve(path.join(__dirname, '..', '..'), 'node')
+const nodeFolder = path.resolve(path.join(__dirname, '..', '..'), 'node')
 
-const isInstalledLocally = require('module').globalPaths.indexOf(upFolder) === -1
+const isInstalledLocally = require('module').globalPaths.indexOf(nodeFolder) === -1
 
 // Do nothing if package is installed globally.
 if (isInstalledLocally) {
