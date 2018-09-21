@@ -13,7 +13,7 @@ if (isInstalledLocally) {
   const fileNameDest = process.argv[3] || fileName
 
   const filePath = path.join(__dirname, fileName)
-  const filePathDest = path.join(__dirname, '..', '..', fileNameDest)
+  const filePathDest = path.join(process.cwd(), fileNameDest)
 
   copyIfItDoesNotExist(filePath, filePathDest)
 }
