@@ -2,10 +2,7 @@
 
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
-**UPDATES**:
-  - v4 adds [browserslist] support and switch to babel v7 namespaced packages
-  - v3 brings super exciting [@babel/preset-env] and [Redux] v4
-  - v2 contains brand new [React] v16
+[![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux)
 
 [Quick start](#quick-start) |
 [Usage](#usage) |
@@ -13,11 +10,12 @@
 [Customization](#customization) |
 [License](#license)
 
+**UPDATES**:
+  - v4 adds [browserslist] support and switch to babel v7 namespaced packages
+  - v3 brings super exciting [@babel/preset-env] and [Redux] v4
+  - v2 contains brand new [React] v16
+
 [![Whatchers](http://g14n.info/svg/github/watchers/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/watchers) [![Stargazers](http://g14n.info/svg/github/stars/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/stargazers) [![Forks](http://g14n.info/svg/github/forks/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/network/members)
-
-[![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux)
-[![Dependency Status](https://david-dm.org/fibo/zeroconf-redux.svg)](https://david-dm.org/fibo/zeroconf-redux/)
-
 <img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Windows8-50.png" width="50" height="50" />
 
 ## Quick start
@@ -239,7 +237,7 @@ Ok ok, if you like semicolons you can use [semistandard].
 [AsyncActions]: http://redux.js.org/docs/advanced/AsyncActions.html "Async Actions Redux documentation"
 [browserslist]: https://github.com/browserslist/browserslist "Browserslist"
 [babelify]: https://github.com/babel/babelify "babelify"
-[babel-core]: https://www.npmjs.com/package/babel-core "babel-core"
+[@babel/core]: https://www.npmjs.com/package/@babel/core "babel-core"
 [@babel/preset-env]: http://babeljs.io/env "Babel env preset"
 [@babel/preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
