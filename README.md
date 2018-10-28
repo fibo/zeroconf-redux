@@ -15,9 +15,6 @@
   - v3 brings super exciting [@babel/preset-env] and [Redux] v4
   - v2 contains brand new [React] v16
 
-[![Whatchers](http://g14n.info/svg/github/watchers/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/watchers) [![Stargazers](http://g14n.info/svg/github/stars/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/stargazers) [![Forks](http://g14n.info/svg/github/forks/zeroconf-redux.svg)](https://github.com/fibo/zeroconf-redux/network/members)
-<img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Linux-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Windows8-50.png" width="50" height="50" />
-
 ## Quick start
 
 Just run
@@ -234,14 +231,11 @@ and add the following to your *package.json*
   ]
 ```
 
-Now on every commit, you will check the code with [standard] linter.
-Ok ok, if you like semicolons you can use [semistandard].
+Now on every commit, you will check the code with [standard] linter. If you like semicolons you can go for [semistandard].
 
 ## License
 
 [MIT](http://g14n.info/mit-license/)
-
-<sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
 
 [AsyncActions]: http://redux.js.org/docs/advanced/AsyncActions.html "Async Actions Redux documentation"
 [browserslist]: https://github.com/browserslist/browserslist "Browserslist"
