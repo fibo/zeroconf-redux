@@ -81,7 +81,7 @@ On `postinstall` the following files are created, if they do not exist:
 * *.browserslistrc*
 * *index.js*
 
-Assuming there is an *index.html* in the same folder as the *package.json* with a content like the following...
+Let's assume there is an *index.html* in the same folder as the *package.json* with a content like the following
 
 ```html
 <!DOCTYPE html>
@@ -93,12 +93,21 @@ Assuming there is an *index.html* in the same folder as the *package.json* with 
 </html>
 ```
 
-... add an npm script to your *package.json*, to run [budo] dev server,
-something like
+Then, adding an npm script to your *package.json*, to run [budo] dev server, something like
 
 ```json
-    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open -- -t babelify",
+    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open --live --pushstate -- -t babelify",
 ```
+
+where:
+
+* `--dir .`: serves current folder content statically.
+* `--serve bundle.js`: set the name of JS bundle produced by browserify.
+* `--open`: opens default browser on start.
+* `--live`: enables livereload.
+* `--pushstate`: needed if you added [react-router].
+
+<sub>See [budo cli docs](https://github.com/mattdesl/budo/blob/master/docs/command-line-usage.md) for more details.</sub>
 
 Your *index.js* looks something like
 
@@ -248,6 +257,7 @@ Ok ok, if you like semicolons you can use [semistandard].
 [React]: https://reactjs.org/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
+[react-router]: https://reacttraining.com/react-router/ "React Router"
 [Redux]: http://redux.js.org/ "Redux"
 [redux_counter]: https://github.com/reactjs/redux/tree/master/examples/counter "Redux example"
 [redux-thunk]: https://github.com/gaearon/redux-thunk "Thunk middleware for Redux"

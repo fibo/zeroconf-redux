@@ -28,6 +28,7 @@ function start () {
   budo(indexFile, {
     live: true,
     open: true,
+    pushstate: true,
     stream: process.stdout,
     browserify: { transform: babelify }
   })
