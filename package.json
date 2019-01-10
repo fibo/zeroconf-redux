@@ -9,6 +9,7 @@
   "scripts": {
     "copy_babelrc": "node copy.js .babelrc",
     "copy_browserslistrc": "node copy.js .browserslistrc",
+    "copy_editorconfig": "node copy.js .editorconfig",
     "example_counter": "budo ./examples/counter/index.js:bundle.js --dir ./examples/counter --open -- -t babelify",
     "postinstall": "npm run copy_babelrc; npm run copy_browserslistrc",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
@@ -54,5 +55,7 @@
     "uglify-js": "^3.4.9",
     "uglifyify": "^5.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "dot-editorconfig": "^1.1.1"
+  }
 }

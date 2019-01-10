@@ -71,6 +71,7 @@ On `postinstall` the following files are created, if they do not exist:
 
 * *.babelrc*
 * *.browserslistrc*
+* *.editorconfig*
 * *index.js*
 
 Let's assume there is an *index.html* in the same folder as the *package.json* with a content like the following
