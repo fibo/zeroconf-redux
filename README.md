@@ -56,6 +56,7 @@ The following dependencies will be installed:
 * [@babel/core]
 * [@babel/preset-env]
 * [@babel/preset-react]
+* [cross-env]
 * [babelify]
 * [browserslist]
 * [budo]
@@ -137,7 +138,7 @@ and your bundle file is *dist/NAME.min.js*, where *NAME* is
 your package name, you could add an npm script like the following
 
 ```json
-    "browserify": "browserify ${npm_package_main} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
+    "browserify": "cross-env NODE_ENV=production browserify ${npm_package_main} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
 ```
 
 ## Customization
@@ -242,6 +243,7 @@ Now on every commit, you will check the code with [standard] linter. If you like
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
+[cross-env]: https://github.com/kentcdodds/cross-env#readme "cross-env"
 [envify]: https://github.com/hughsk/envify "envify"
 [redux-saga]: https://redux-saga.js.org/ "Redux-Saga"
 [React]: https://reactjs.org/ "React"

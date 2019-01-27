@@ -43,10 +43,11 @@
   "homepage": "http://g14n.info/zeroconf-redux/",
   "dependencies": {
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "babelify": "^10.0.0",
-    "budo": "^11.5.0",
+    "budo": "^11.6.0",
+    "cross-env": "^5.2.0",
     "envify": "^4.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
