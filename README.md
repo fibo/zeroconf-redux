@@ -180,7 +180,7 @@ Default *.babelrc* created on *postinstall* is the following.
 }
 ```
 
-You may want to customize it, for more details see [babel-preset-env].
+You may want to customize it, for more details see [@babel/preset-env].
 
 ### Browserslist
 
