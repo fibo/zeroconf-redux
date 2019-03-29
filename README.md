@@ -56,6 +56,7 @@ The following dependencies will be installed:
 * [@babel/core]
 * [@babel/preset-env]
 * [@babel/preset-react]
+* [core-js]
 * [cross-env]
 * [babelify]
 * [browserslist]
@@ -173,6 +174,7 @@ Default *.babelrc* created on *postinstall* is the following.
     [
       "@babel/preset-env",
       {
+        "corejs": 3,
         "useBuiltIns": "entry"
       }
     ]
@@ -242,6 +244,7 @@ Now on every commit, you will check the code with [standard] linter. If you like
 [@babel/preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
+[core-js]: https://github.com/zloirock/core-js "core-js"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
 [cross-env]: https://github.com/kentcdodds/cross-env#readme "cross-env"
 [envify]: https://github.com/hughsk/envify "envify"
