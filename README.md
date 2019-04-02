@@ -75,7 +75,8 @@ On `postinstall` the following files are created, if they do not exist:
 * *.babelrc*
 * *.browserslistrc*
 * *.editorconfig*
-* *index.js*
+
+If you run `npx zeroconf-redux` commmand, a file *index.js* is created if it does not exists and development server will start in watch mode, with a default *index.html* (in memory).
 
 Let's assume there is an *index.html* in the same folder as the *package.json* with a content like the following
 
@@ -105,7 +106,7 @@ where:
 
 <sub>See [budo cli docs](https://github.com/mattdesl/budo/blob/master/docs/command-line-usage.md) for more details.</sub>
 
-Your *index.js* looks something like
+Your *index.js* should look something like
 
 ```javascript
 import React from 'react'
