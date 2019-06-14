@@ -57,12 +57,13 @@ The following dependencies will be installed:
 * [@babel/plugin-proposal-class-properties]
 * [@babel/preset-env]
 * [@babel/preset-react]
-* [core-js]
-* [cross-env]
 * [babelify]
 * [browserslist]
 * [budo]
+* [core-js]
+* [cross-env]
 * [envify]
+* [eslint-plugin-react-hooks]
 * [react][React]
 * [react-dom]
 * [react-redux]
@@ -237,6 +238,18 @@ and add the following to your *package.json*
 
 Now on every commit, you will check the code with [standard] linter. If you like semicolons you can go for [semistandard].
 
+If you are using *React hooks* you will need also [eslint-plugin-react-hooks], so you need to use [standardx] linter.
+Same instructions as above, but substitute *standard* with *standardx*, then for example add the following to your *package.json*
+
+```json
+  "eslintConfig": {
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
+  }
+```
+
 ## License
 
 [MIT](http://g14n.info/mit-license/)
@@ -254,9 +267,10 @@ Now on every commit, you will check the code with [standard] linter. If you like
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
 [cross-env]: https://github.com/kentcdodds/cross-env#readme "cross-env"
 [envify]: https://github.com/hughsk/envify "envify"
-[redux-saga]: https://redux-saga.js.org/ "Redux-Saga"
-[React]: https://reactjs.org/ "React"
-[react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
+[eslint-plugin-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks "React hooks Eslint plugin"
+[redux-saga]: https://redux-saga.js.org/ "redux-saga"
+[react]: https://reactjs.org/ "react"
+[react-dom]: https://www.npmjs.com/package/react-dom "react dom"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
 [react-router]: https://reacttraining.com/react-router/ "React Router"
 [Redux]: http://redux.js.org/ "Redux"
@@ -264,6 +278,7 @@ Now on every commit, you will check the code with [standard] linter. If you like
 [redux-thunk]: https://github.com/gaearon/redux-thunk "Thunk middleware for Redux"
 [semistandard]: https://github.com/Flet/semistandard "Semi-Standard JS"
 [standard]: https://standardjs.com/ "Standard JS"
+[standardx]: https://github.com/standard/standardx "Standardx linter"
 [npm]: https://npmjs.org/ "npm"
 [uglifyify]: https://github.com/hughsk/uglifyify "uglifyify"
 [UglifyJS]:  https://github.com/mishoo/UglifyJS
