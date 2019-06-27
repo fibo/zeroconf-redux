@@ -209,7 +209,7 @@ Probably you need to call an asynchronous API: the standard way is to use
 the [Redux Thunk middleware][redux-thunk], so you need to install
 
 ```bash
-npm install redux-thunk --save
+npm install redux-thunk
 ```
 
 This choice is up to you. For example you could prefer [redux-saga].
@@ -222,7 +222,7 @@ In my opinion [redux-thunk] is a really good choice: it is stable, battle tested
 It is strongly recommended to lint your code. Do not think it too much, just launch
 
 ```bash
-npm i pre-commit standard -D
+npm install babel-eslint pre-commit standard --save-dev
 ```
 
 and add the following to your *package.json*
@@ -233,7 +233,10 @@ and add the following to your *package.json*
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "standard": {
+    "parser": "babel-eslint"
+  }
 ```
 
 Now on every commit, you will check the code with [standard] linter. If you like semicolons you can go for [semistandard].
