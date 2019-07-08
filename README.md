@@ -236,7 +236,7 @@ and add the following to your *package.json*
   ],
   "standard": {
     "parser": "babel-eslint"
-  }
+  },
 ```
 
 Now on every commit, you will check the code with [standard] linter. If you like semicolons you can go for [semistandard].
@@ -246,11 +246,14 @@ Same instructions as above, but substitute *standard* with *standardx*, then for
 
 ```json
   "eslintConfig": {
+    "plugins": [
+      "react-hooks"
+    ],
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn"
     }
-  }
+  },
 ```
 
 ## License
