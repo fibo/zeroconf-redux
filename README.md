@@ -7,8 +7,9 @@
 [Quick start](#quick-start) |
 [Usage](#usage) |
 [Production build](#production-build) |
-[Customization](#customization) |
-[License](#license)
+[Customization](#customization)
+
+**UPDATE** latest version 5 replaces UglifyJS with [TerserJS]
 
 ## Quick start
 
@@ -68,7 +69,7 @@ The following dependencies will be installed:
 * [react-dom]
 * [react-redux]
 * [redux][Redux]
-* [UglifyJS]
+* [TerserJS]
 * [uglifyify]
 
 On `postinstall` the following files are created, if they do not exist:
@@ -142,7 +143,7 @@ and your bundle file is *dist/NAME.min.js*, where *NAME* is
 your package name, you could add an npm script like the following
 
 ```json
-    "browserify": "cross-env NODE_ENV=production browserify ${npm_package_main} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | uglifyjs --compress --mangle > dist/${npm_package_name}.min.js",
+    "browserify": "cross-env NODE_ENV=production browserify ${npm_package_main} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > dist/${npm_package_name}.min.js",
 ```
 
 ## Customization
@@ -287,5 +288,5 @@ Same instructions as above, but substitute *standard* with *standardx*, then for
 [standardx]: https://github.com/standard/standardx "Standardx linter"
 [npm]: https://npmjs.org/ "npm"
 [uglifyify]: https://github.com/hughsk/uglifyify "uglifyify"
-[UglifyJS]:  https://github.com/mishoo/UglifyJS
+[TerserJS]: https://github.com/terser-js/terser "Terser JS"
 
