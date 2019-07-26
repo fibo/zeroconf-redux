@@ -11,7 +11,7 @@
     "copy_browserslistrc": "node copy.js .browserslistrc",
     "copy_editorconfig": "node copy.js .editorconfig",
     "example_counter": "budo ./examples/counter/index.js:bundle.js --dir ./examples/counter --open -- -t babelify",
-    "postinstall": "npm run copy_babelrc; npm run copy_browserslistrc; npm run copy_editorconfig",
+    "postinstall": "node copy.js .babelrc .browserslistrc .editorconfig",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "test": "node notest.js"
   },
