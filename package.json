@@ -42,9 +42,9 @@
   },
   "homepage": "http://g14n.info/zeroconf-redux/",
   "dependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/plugin-proposal-class-properties": "^7.5.0",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babelify": "^10.0.0",
     "budo": "^11.6.2",
@@ -55,7 +55,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.1",
-    "redux": "^4.0.1",
+    "redux": "^4.0.4",
     "terser": "^4.1.2",
     "uglifyify": "^5.0.1"
   },
