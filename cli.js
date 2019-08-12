@@ -6,7 +6,6 @@ const fs = require('fs')
 const path = require('path')
 
 const babelrc = fs.readFileSync(path.join(__dirname, '.babelrc'), 'utf8')
-babelify.configure(JSON.parse(babelrc))
 
 const indexFile = 'index.js'
 
@@ -32,7 +31,11 @@ function start () {
     open: true,
     pushstate: true,
     stream: process.stdout,
-    browserify: { transform: babelify }
+    browserify: {
+      transform: [
+        babelify.configure(JSON.parse(babelrc))
+      ]
+    }
   })
 }
 
