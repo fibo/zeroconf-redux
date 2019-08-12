@@ -5,12 +5,14 @@ const budo = require('budo')
 const fs = require('fs')
 const path = require('path')
 
+const babelrc = fs.readFileSync(path.join(__dirname, '.babelrc'), 'utf8')
+babelify.configure(JSON.parse(babelrc))
+
 const indexFile = 'index.js'
 
 const indexPath = path.join(process.cwd(), indexFile)
 
-const indexContent = `
-import React from 'react'
+const indexContent = `import React from 'react'
 import ReactDOM from 'react-dom'
 
 const root = document.createElement('div')
