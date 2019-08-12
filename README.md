@@ -16,7 +16,9 @@
 Just run
 
 ```bash
+npm install zeroconf-redux
 npx zeroconf-redux
+# Yay!
 ```
 
 Your browser will open and you can start coding your awesome [React]/[Redux] web app now!

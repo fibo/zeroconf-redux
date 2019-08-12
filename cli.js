@@ -5,8 +5,6 @@ const budo = require('budo')
 const fs = require('fs')
 const path = require('path')
 
-const babelrc = fs.readFileSync(path.join(__dirname, '.babelrc'), 'utf8')
-
 const indexFile = 'index.js'
 
 const indexPath = path.join(process.cwd(), indexFile)
@@ -32,9 +30,7 @@ function start () {
     pushstate: true,
     stream: process.stdout,
     browserify: {
-      transform: [
-        babelify.configure(JSON.parse(babelrc))
-      ]
+      transform: [ babelify ]
     }
   })
 }
