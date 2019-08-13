@@ -146,8 +146,7 @@ your package name, you could add an npm script like the following
     "browserify": "cross-env NODE_ENV=production browserify ${npm_package_main} -t babelify -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > dist/${npm_package_name}.min.js",
 ```
 
-Unfortunately at the time of this writing, this could not work on Windows: I mean, the environment variables `npm_package_main` and `npm_package_name` could be undefined if you launch some npm script from an MSDOS prompt.
-Maybe it is due to npm that expects it is running in a bash environment.
+Unfortunately at the time of this writing, this may not work on *Windows*: the environment variables `npm_package_main` and `npm_package_name` could be undefined if you launch some npm script from an *MSDOS prompt*, 'cause *npm* expects it is running in a *bash* environment.
 Hence you need to hardcode file paths if you need cross platform compatibility.
 
 ## Customization
