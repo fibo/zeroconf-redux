@@ -1,6 +1,6 @@
 # zeroconf-redux
 
-> is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
+> is a [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
 [![NPM version](https://badge.fury.io/js/zeroconf-redux.svg)](http://badge.fury.io/js/zeroconf-redux)
 
@@ -9,14 +9,14 @@
 [Production build](#production-build) |
 [Customization](#customization)
 
-**UPDATE** latest version 5 replaces UglifyJS with [TerserJS]
+**UPDATE** latest version 5 replaces UglifyJS with [TerserJS].
 
 ## Quick start
 
 Just run
 
 ```bash
-npm install zeroconf-redux
+npm install zeroconf-redux --save-dev
 npx zeroconf-redux
 # Yay!
 ```
@@ -56,6 +56,7 @@ The following dependencies will be installed:
 
 * [@babel/core]
 * [@babel/plugin-proposal-class-properties]
+* [@babel/plugin-proposal-object-rest-spread]
 * [@babel/preset-env]
 * [@babel/preset-react]
 * [babelify]
@@ -178,17 +179,18 @@ Default *.babelrc* created on *postinstall* is the following.
 ```json
 {
   "plugins": [
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread"
   ],
   "presets": [
-    "@babel/preset-react",
     [
       "@babel/preset-env",
       {
         "corejs": 3,
         "useBuiltIns": "entry"
       }
-    ]
+    ],
+    "@babel/preset-react"
   ]
 }
 ```
@@ -261,6 +263,45 @@ Same instructions as above, but substitute *standard* with *standardx*, then for
   },
 ```
 
+### TypeScript
+
+You can use Babel and TypeScript together, I could achieve it in my side project [GoSeven](https://github.com/go-seven/go-seven.com). It was tricky but it is worth to use typings and browserslist queries together.
+
+Install additional dependencies
+
+```bash
+npm install typescript @babel/preset-typescript @types/react @types/react-dom
+```
+
+and edit your `.babelrc` presets
+
+```diff
+{
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": 3,
+        "useBuiltIns": "entry"
+      }
+    ],
++   "@babel/preset-typescript",
+    "@babel/preset-react"
+  ]
+}
+```
+
+Probably you are going to use `.ts` and `.tsx` file extensions, the following options will do the trick but do not ask me how it works and why it is used `--extension` option for browserify and `--extensions` option for babelify: simply I do not know why but it works for me.
+
+```diff
+-    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open --live --pushstate -- -t babelify",
++    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open --live --pushstate -- --extension .ts --extension .tsx -t [ babelify --extensions .ts,.tsx]",
+```
+
 ## License
 
 [MIT](http://g14n.info/mit-license/)
@@ -270,6 +311,7 @@ Same instructions as above, but substitute *standard* with *standardx*, then for
 [babelify]: https://github.com/babel/babelify "babelify"
 [@babel/core]: https://www.npmjs.com/package/@babel/core "babel-core"
 [@babel/plugin-proposal-class-properties]: https://babeljs.io/docs/en/babel-plugin-proposal-class-properties "Babel plugin-proposal-class-properties"
+[@babel/plugin-proposal-object-rest-spread]: https://babeljs.io/docs/en/babel-plugin-proposal-object-rest-spread "Babel plugin-proposal-object-rest-spread"
 [@babel/preset-env]: http://babeljs.io/env "Babel env preset"
 [@babel/preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
