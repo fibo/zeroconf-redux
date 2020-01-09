@@ -198,7 +198,7 @@ You may want to customize it, for more details see [@babel/preset-env].
 
 ### Browserslist
 
-Default *.browserslist* created on *postinstall* is the following.
+Default *.browserslistrc* created on *postinstall* is the following.
 
 ```
 > 0.5%
