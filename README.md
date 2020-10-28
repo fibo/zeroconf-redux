@@ -59,6 +59,7 @@ The following dependencies will be installed:
 * [@babel/plugin-proposal-object-rest-spread]
 * [@babel/preset-env]
 * [@babel/preset-react]
+* [@reduxjs/toolkit][redux-toolkit]
 * [babelify]
 * [browserslist]
 * [budo]
@@ -69,7 +70,6 @@ The following dependencies will be installed:
 * [react][React]
 * [react-dom]
 * [react-redux]
-* [redux][Redux]
 * [TerserJS]
 * [uglifyify]
 
@@ -209,20 +209,6 @@ not dead
 
 You may want to edit target browsers, for more details see [browserslist].
 
-### Async Redux
-
-Probably you need to call an asynchronous API: the standard way is to use
-the [Redux Thunk middleware][redux-thunk], so you need to install
-
-```bash
-npm install redux-thunk
-```
-
-This choice is up to you. For example you could prefer [redux-saga].
-Since there are few alternatives this package does not include a middleware to dispatch async actions.
-See [Async Actions chapter on official Redux documentation][AsyncActions] for details.
-In my opinion [redux-thunk] is a really good choice: it is stable, battle tested, has a very good documentation and a *flat learning curve*.
-
 ### Linter
 
 It is strongly recommended to lint your code. Do not think it too much, just launch
@@ -320,7 +306,7 @@ Probably you are going to use `.ts` and `.tsx` file extensions, the following op
 [cross-env]: https://github.com/kentcdodds/cross-env#readme "cross-env"
 [envify]: https://github.com/hughsk/envify "envify"
 [eslint-plugin-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks "React hooks Eslint plugin"
-[redux-saga]: https://redux-saga.js.org/ "redux-saga"
+[redux-toolkit]: https://github.com/reduxjs/redux-toolkit
 [react]: https://reactjs.org/ "react"
 [react-dom]: https://www.npmjs.com/package/react-dom "react dom"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
