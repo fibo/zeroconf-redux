@@ -12,7 +12,7 @@
     "copy_editorconfig": "node copy.js .editorconfig",
     "example_counter": "budo ./examples/counter/index.js:bundle.js --dir ./examples/counter --open -- -t babelify",
     "postinstall": "node copy.js .babelrc .browserslistrc .editorconfig",
-    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
+    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin main",
     "test": "node notest.js"
   },
   "repository": {
