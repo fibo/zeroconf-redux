@@ -255,7 +255,7 @@ You can use Babel and TypeScript together, I could achieve it in my side project
 Install additional dependencies
 
 ```bash
-npm install typescript @babel/preset-typescript @types/react @types/react-dom
+npm install typescript tsify @babel/preset-typescript @types/react @types/react-dom
 ```
 
 and edit your `.babelrc` presets
@@ -280,11 +280,11 @@ and edit your `.babelrc` presets
 }
 ```
 
-Probably you are going to use `.ts` and `.tsx` file extensions, the following options will do the trick but do not ask me how it works and why it is used `--extension` option for browserify and `--extensions` option for babelify: simply I do not know why but it works for me.
+Then modify your *package.json*, notice that `-p tsify` and `-t babelify` options order matters.
 
 ```diff
 -    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open --live --pushstate -- -t babelify",
-+    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open --live --pushstate -- --extension .ts --extension .tsx -t [ babelify --extensions .ts,.tsx]",
++    "start": "budo ${npm_package_main} --dir . --serve bundle.js --open --live --pushstate -- -p tsify -t babelify",
 ```
 
 ## License
